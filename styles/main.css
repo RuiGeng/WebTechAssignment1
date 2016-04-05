@@ -1,0 +1,21 @@
+html,
+body {
+    background: url(../imgs/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.inner {
+    color: rgb(255, 255, 255);
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.footer {
+    margin-top: 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}

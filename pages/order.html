@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../imgs/favicon.ico">
+    <title>Conestoga Pizzeria</title>
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="../index.html">Conestoga Pizzeria</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="#">MENU</a></li>
+                        <li class="active"><a href="order.html">ORDER</a></li>
+                        <li><a href="#">LOCATION</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <form name="contact" id="contact" class="cfrom">
+            <fieldset class="form-group">
+                <legend>Delivery Contact</legend>
+                <div class="form-group row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label for="fname">First Name *</label>
+                        <input form="contact" tabindex="1" id="fname" name="fname" class="form-control" type="text" placeholder="First Name">
+                        <span id="fnamehelp" class="help-block hidden">Please Input First Name</span>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label for="lname">Last Name *</label>
+                        <input form="contact" tabindex="2" id="lname" name="lname" class="form-control" type="text" placeholder="Last Name">
+                        <span id="lnamehelp" class="help-block hidden">Please Input Last Name</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label for="phone">Phone Number *</label>
+                        <input form="contact" tabindex="3" id="phone" name="phone" type="tel" class="form-control" placeholder="xxx-xxx-xxxx">
+                        <span id="phonehelp" class="help-block hidden">Please Enter a Valid Phone Number</span>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label for="email">Email Address *</label>
+                        <input form="contact" tabindex="4" id="email" name="email" type="email" class="form-control" placeholder="info@pizzeria.com">
+                        <span id="emailhelp" class="help-block hidden">Please Enter a Valid Eemail Address</span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend>Delivery Address</legend>
+                <div class="form-group row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label for="address1">Address Line 1 *</label>
+                        <input form="contact" tabindex="5" id="address1" name="address1" type="text" class="form-control" placeholder="Street address, P.O. box, company name, c/o">
+                        <span id="address1help" class="help-block hidden">Please Enter Your Address</span>
+                    </div>
+
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                        <label for="address2">Address Line 2 *</label>
+                        <input form="contact" tabindex="6" id="address2" name="address2" type="text" class="form-control" placeholder="Apartment, suite, unit, building, floor, etc">
+                        <span id="address2help" class="help-block hidden">Please Enter Your Address</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                        <label for="province">Province *</label>
+                        <select form="contact" tabindex="7" id="province" name="province" class="form-control">
+                            <option value="ontario" selected>Ontario</option>
+                            <option value="quebec">Quebec</option>
+                            <option value="manitoba">Manitoba</option>
+                            <option value="saskatchewan">Saskatchewan</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                        <label for="city">City *</label>
+                        <input form="contact" tabindex="8" id="city" name="city" type="text" class="form-control" placeholder="">
+                        <span id="cityhelp" class="help-block hidden">Please Enter Your City</span>
+                    </div>
+                    <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                        <label for="postal">Postal Code *</label>
+                        <input form="contact" tabindex="9" id="postal" name="postal" type="text" class="form-control" placeholder="">
+                        <span id="postalhelp" class="help-block hidden">Please Enter a Valid Postal Code</span>
+                    </div>
+
+                </div>
+            </fieldset>
+            <div class="col-md-12 text-center">
+                <button form="contact" tabindex="10" id="next" type="button" class="btn btn-default">Next</button>
+            </div>
+        </form>
+
+        <div id="order" class="row hidden">
+            <div class="col-lg-8 col-md-8">
+                <div class="row panel panel-primary">
+                    <div class="panel-heading">PIZZA</div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="radio">
+                            <img src="../imgs/Pizza/Pizza1.jpg" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="pizzaRadios" id="original" tabindex="11" value="original" checked>Original Pizza
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="radio">
+                            <img src="../imgs/Pizza/Pizza2.jpg" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="pizzaRadios" id="california" tabindex="12" value="california">California Pizza
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="radio">
+                            <img src="../imgs/Pizza/Pizza3.jpg" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="pizzaRadios" id="neapolitan" tabindex="13" value="neapolitan">Neapolitan Pizza
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="radio">
+                            <img src="../imgs/Pizza/Pizza4.jpg" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="pizzaRadios" id="poutine" tabindex="14" value="poutine">Poutine pizza
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row panel panel-primary">
+                    <div class="panel-heading">SIZE</div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="radio">
+                            <img src="../imgs/size/small.png" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="sizeRadios" id="small" tabindex="15" value="small" checked>Small
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="radio">
+                            <img src="../imgs/size/medium.png" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="sizeRadios" id="medium" tabindex="16" value="medium">Medium
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="radio">
+                            <img src="../imgs/size/Large.png" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="sizeRadios" id="large" tabindex="17" value="large">Large
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                        <div class="radio">
+                            <img src="../imgs/size/xlarge.png" class="img-responsive img-rounded">
+                            <label>
+                                <input type="radio" name="sizeRadios" id="xlarge" tabindex="18" value="xlarge">X-Large
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row panel panel-primary" id="toppings">
+                    <div class="panel-heading">TOPPINGS</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/onion.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="onion" id="onion" tabindex="19" value="onion">Onion
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/pepper.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="pepper" id="pepper" tabindex="20" value="pepper">Green Pepper
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/mushroom.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="mushroom" id="mushroom" tabindex="21" value="mushroom">Mushroom
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/olives.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="olives" id="olives" tabindex="22" value="olives">Olives
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/pineapple.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="pineapple" id="pineapple" tabindex="23" value="pineapple">Pineapple
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/asparagus.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="asparagus" id="asparagus" tabindex="24" value="asparagus">Asparagus
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/pepperoni.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="pepperoni" id="pepperoni" tabindex="25" value="pepperoni">Pepperoni
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/bacon.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="bacon" id="bacon" tabindex="26" value="bacon">Bacon
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/ham.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="ham" id="ham" tabindex="27" value="ham">Ham
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/beef.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="beef" id="beef" tabindex="28" value="beef">Beef
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/sausage.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="sausage" id="sausage" tabindex="29" value="sausage">Sausage
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <p><img src="../imgs/topping/Chicken.png" class="img-responsive img-rounded"></p>
+                            <label>
+                                <input type="checkbox" name="chicken" id="chicken" tabindex="30" value="chicken">Buffalo Chicken
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row panel panel-primary" id="dough">
+                    <div class="panel-heading">CRUST</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="checkbox">
+                            <img src="../imgs/type/Crust.jpeg" class="img-responsive img-rounded">
+                            <label>
+                                <input type="checkbox" name="crust" id="crust" tabindex="31" value="stuffed crust">Stuffed Crust
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">MY PIZZA</div>
+                    <div class="panel-body">Size: <span id="size"></span></div>
+                    <div class="panel-body">Toppings: <span id="topping"></span></div>
+                    <div class="panel-body">Crust: <span id="iscrust"></span></div>
+                    <div class="panel-body">Tax: <span id="tax"></span></div>
+                    <div class="panel-footer">Current Price: <span id="price"></span></div>
+                </div>
+                <div>
+                    <h4>Order List:</h4>
+                    <table class="table table-striped table-responsive" id="orderlist">
+                        <thead>
+                            <tr>
+                                <th>Pizza</th>
+                                <th>Size</th>
+                                <th>Topping</th>
+                                <th>Crust</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listbody">
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+                        <strong><p>Total: <span id="total"></span></p></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <button id="previous" type="button" tabindex="32" class="btn btn-default">Previous</button>
+                <button id="addtocart" type="button" tabindex="33" class="btn btn-primary">Add to Cart</button>
+                <button id="orderbutton" type="button" tabindex="34" class="btn btn-primary hidden" data-toggle="modal" data-target="#totalModal">Order</button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="totalModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Order Detail</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="deliveryinfor">
+                            <p>First Name: <span id="customerFname"></span></p>
+                            <p>Last Name: <span id="customerLname"></span></p>
+                            <p>Phone Number: <span id="customerPhone"></span></p>
+                            <p>Email address: <span id="customerEmail"></span></p>
+                            <p>Address Line 1: <span id="customerAddress1"></span></p>
+                            <p>Address Line 2: <span id="customerAddress2"></span></p>
+                            <p>Province: <span id="customerProvince"></span></p>
+                            <p>City: <span id="customerCity"></span></p>
+                            <p>Postal Code: <span id="customerPostal"></span></p>
+                        </div>
+                        <div id="orderinfor">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="row">
+                <ul class="list-inline text-center">
+                    <li>Conestoga Pizzeria</li>
+                    <li>Student Name: Rui Geng</li>
+                    <li>Student Number: 7128218</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+    <script type="text/javascript" src="../scripts/onload.js"></script>
+    <script type="text/javascript" src="../scripts/validation.js"></script>
+    <script type="text/javascript" src="../scripts/functions.js"></script>
+    <script type="text/javascript" src="../scripts/order.js"></script>
+</body>
+
+</html>
